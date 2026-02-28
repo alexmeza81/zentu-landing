@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Únete a ZentU | Waitlist Estudiantes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F8F9FA;
+        }
+
+        .gradient-purple-blue {
+            background: linear-gradient(135deg, #7B68EE 0%, #4A9EFF 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #7B68EE 0%, #4A9EFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .shadow-card {
+            box-shadow:
+                0 0 0 1px rgba(0,0,0,.04),
+                0 2px 6px rgba(0,0,0,.04),
+                0 10px 20px rgba(0,0,0,.06);
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid #E2E8F0;
+            border-radius: 0.75rem;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: #0F172A;
+            background: #fff;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .input-field:focus {
+            border-color: #7B68EE;
+            box-shadow: 0 0 0 4px rgba(123, 104, 238, 0.1);
+        }
+
+        .input-field::placeholder {
+            color: #94A3B8;
+            font-weight: 400;
+        }
+
+        .pref-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid #E2E8F0;
+            border-radius: 9999px;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            color: #64748B;
+            background: #fff;
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .pref-pill:hover {
+            border-color: #7B68EE;
+            color: #7B68EE;
+        }
+
+        .pref-pill.selected {
+            background: linear-gradient(135deg, #7B68EE 0%, #4A9EFF 100%);
+            border-color: transparent;
+            color: #fff;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.5s ease forwards;
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+
+        .scale-in {
+            animation: scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        .hero-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #7B68EE;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.5; transform: scale(1.3); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="flex justify-between items-center px-6 md:px-8 py-4 max-w-7xl mx-auto">
+            <a href="zentu_Home.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 gradient-purple-blue rounded-2xl flex items-center justify-center shadow-lg">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <span class="text-2xl font-black tracking-tight">ZentU</span>
+            </a>
+            <a href="zentu_Home.html" class="text-sm font-semibold text-slate-500 hover:text-slate-900 transition flex items-center gap-1.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Volver
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="min-h-screen py-12 md:py-20">
+        <div class="max-w-5xl mx-auto px-6 md:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+
+                <!-- Left: Branding -->
+                <div class="fade-up">
+
+                    <!-- Eyebrow -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-100 rounded-full text-sm font-bold text-purple-700 mb-8">
+                        <span class="hero-dot"></span>
+                        Acceso anticipado
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] mb-5 tracking-tight">
+                        Sé de los primeros<br/>en unirte al<br/>
+                        <span class="gradient-text">movimiento ZentU.</span>
+                    </h1>
+
+                    <p class="text-lg text-slate-500 mb-8 leading-relaxed">
+                        Una nueva generación de talento.<br/>
+                        Una nueva forma de encontrarlo.
+                    </p>
+
+                    <!-- Insignia Fundador -->
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200 rounded-2xl p-5 mb-8">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-400 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-black text-amber-900 text-sm">Insignia de Fundador</p>
+                                <p class="text-amber-700 text-xs mt-0.5 leading-relaxed">Los primeros estudiantes en registrarse recibirán una insignia exclusiva de Fundador en su perfil — un reconocimiento permanente por ser parte del inicio del movimiento.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benefits -->
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-xl gradient-purple-blue flex items-center justify-center flex-shrink-0 shadow-md mt-0.5">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900 text-sm">Tu perfil, no tu CV</p>
+                                <p class="text-slate-500 text-sm">Muestra tus habilidades reales con IA. Las empresas te descubren.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-xl gradient-purple-blue flex items-center justify-center flex-shrink-0 shadow-md mt-0.5">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900 text-sm">Conexión directa con empresas</p>
+                                <p class="text-slate-500 text-sm">Sin intermediarios. Las empresas te contactan a ti.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-xl gradient-purple-blue flex items-center justify-center flex-shrink-0 shadow-md mt-0.5">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900 text-sm">100% gratis para estudiantes</p>
+                                <p class="text-slate-500 text-sm">Sin costos ocultos. Acceso completo a todas las funciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div id="formSection" class="fade-up">
+                    <div class="bg-white rounded-3xl shadow-card p-8">
+
+                        <div class="mb-7">
+                            <h2 class="text-2xl font-black text-slate-900 mb-1">Regístrate en la waitlist</h2>
+                            <p class="text-sm text-slate-500">Te avisamos en cuanto abramos acceso.</p>
+                        </div>
+
+                        <form id="waitlistForm" onsubmit="handleSubmit(event)" class="space-y-5" novalidate>
+
+                            <!-- Web3Forms hidden fields -->
+                            <input type="hidden" name="access_key" value="857a8cbc-b75c-4bdd-9021-f0b00ffa4277">
+                            <input type="hidden" name="subject" value="Nuevo registro Waitlist ZentU — Estudiante">
+                            <input type="hidden" name="from_name" value="ZentU Waitlist">
+                            <input type="hidden" id="preferenciasInput" name="Preferencias laborales" value="">
+
+                            <!-- Nombre + Apellido -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-black text-slate-700 uppercase tracking-wider mb-1.5">Nombre</label>
+                                    <input type="text" id="nombre" name="Nombre" placeholder="Ana" class="input-field" required>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-black text-slate-700 uppercase tracking-wider mb-1.5">Apellido</label>
+                                    <input type="text" id="apellido" name="Apellido" placeholder="Torres" class="input-field" required>
+                                </div>
+                            </div>
+
+                            <!-- Correo -->
+                            <div>
+                                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider mb-1.5">Correo electrónico</label>
+                                <input type="email" id="correo" name="email" placeholder="ana@universidad.edu.mx" class="input-field" required>
+                            </div>
+
+                            <!-- Universidad -->
+                            <div>
+                                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider mb-1.5">Universidad</label>
+                                <input type="text" id="universidad" name="Universidad" placeholder="IPN, UNAM, ITESM, Anáhuac, UANL..." class="input-field" required>
+                            </div>
+
+                            <!-- Carrera -->
+                            <div>
+                                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider mb-1.5">Carrera</label>
+                                <input type="text" id="carrera" name="Carrera" placeholder="Diseño Gráfico, Ing. en Sistemas..." class="input-field" required>
+                            </div>
+
+                            <!-- Fecha de egreso -->
+                            <div>
+                                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider mb-1.5">Fecha de egreso</label>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <select id="egresoMes" name="Mes de egreso" class="input-field" required>
+                                        <option value="" disabled selected>Mes</option>
+                                        <option value="Enero">Enero</option>
+                                        <option value="Febrero">Febrero</option>
+                                        <option value="Marzo">Marzo</option>
+                                        <option value="Abril">Abril</option>
+                                        <option value="Mayo">Mayo</option>
+                                        <option value="Junio">Junio</option>
+                                        <option value="Julio">Julio</option>
+                                        <option value="Agosto">Agosto</option>
+                                        <option value="Septiembre">Septiembre</option>
+                                        <option value="Octubre">Octubre</option>
+                                        <option value="Noviembre">Noviembre</option>
+                                        <option value="Diciembre">Diciembre</option>
+                                    </select>
+                                    <select id="egresoAnio" name="Año de egreso" class="input-field" required>
+                                        <option value="" disabled selected>Año</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Preferencias laborales -->
+                            <div>
+                                <label class="block text-xs font-black text-slate-700 uppercase tracking-wider mb-3">Preferencias laborales <span class="text-slate-400 font-semibold normal-case tracking-normal">(elige las que apliquen)</span></label>
+                                <div class="flex flex-wrap gap-2" id="preferencias">
+                                    <span class="pref-pill" onclick="togglePref(this)">Prácticas profesionales</span>
+                                    <span class="pref-pill" onclick="togglePref(this)">Tiempo completo</span>
+                                    <span class="pref-pill" onclick="togglePref(this)">Medio tiempo</span>
+                                    <span class="pref-pill" onclick="togglePref(this)">Freelance</span>
+                                    <span class="pref-pill" onclick="togglePref(this)">Startup</span>
+                                    <span class="pref-pill" onclick="togglePref(this)">Empresa establecida</span>
+                                    <span class="pref-pill" onclick="togglePref(this)">Remoto</span>
+                                    <span class="pref-pill" onclick="togglePref(this)">Híbrido</span>
+                                    <span class="pref-pill" onclick="togglePref(this)">Presencial</span>
+                                </div>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" id="submitBtn" class="w-full gradient-purple-blue text-white py-4 rounded-xl font-black text-base hover:opacity-90 transition shadow-lg flex items-center justify-center gap-2 mt-2">
+                                Unirme al movimiento
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Success State -->
+    <div id="successState" class="hidden fixed inset-0 bg-white z-50 flex items-center justify-center p-6">
+        <div class="text-center max-w-md scale-in">
+
+            <!-- Icon -->
+            <div class="w-24 h-24 gradient-purple-blue rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-2xl">
+                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+            </div>
+
+            <h2 class="text-4xl font-black text-slate-900 mb-3">¡Ya estás dentro!</h2>
+            <p class="text-lg text-slate-500 mb-2 leading-relaxed">
+                <span id="successName" class="font-bold text-slate-900"></span>, te avisamos en cuanto abramos acceso.
+            </p>
+            <p class="text-sm text-slate-400 mb-10">
+                Revisa tu correo — te enviaremos novedades del movimiento ZentU.
+            </p>
+
+            <p class="text-base font-black text-slate-900 mb-1">Una nueva generación de talento.</p>
+            <p class="text-base font-black gradient-text mb-10">Una nueva forma de encontrarlo.</p>
+
+            <a href="zentu_Home.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-slate-900 transition">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Volver al inicio
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Poblar años dinámicamente
+        (function populateYears() {
+            const select = document.getElementById('egresoAnio');
+            const current = new Date().getFullYear();
+            for (let y = current - 2; y <= current + 6; y++) {
+                const opt = document.createElement('option');
+                opt.value = y;
+                opt.textContent = y;
+                select.appendChild(opt);
+            }
+        })();
+
+        function togglePref(el) {
+            el.classList.toggle('selected');
+        }
+
+        function markError(id) {
+            const el = document.getElementById(id);
+            el.style.borderColor = '#F87171';
+            el.addEventListener('change', () => el.style.borderColor = '', { once: true });
+            el.addEventListener('input',  () => el.style.borderColor = '', { once: true });
+        }
+
+        async function handleSubmit(e) {
+            e.preventDefault();
+
+            const nombre   = document.getElementById('nombre').value.trim();
+            const apellido = document.getElementById('apellido').value.trim();
+            const correo   = document.getElementById('correo').value.trim();
+            const uni      = document.getElementById('universidad').value.trim();
+            const carrera  = document.getElementById('carrera').value.trim();
+            const mes      = document.getElementById('egresoMes').value;
+            const anio     = document.getElementById('egresoAnio').value;
+
+            // Validación
+            let valid = true;
+            [
+                { id: 'nombre',      val: nombre },
+                { id: 'apellido',    val: apellido },
+                { id: 'correo',      val: correo },
+                { id: 'universidad', val: uni },
+                { id: 'carrera',     val: carrera },
+                { id: 'egresoMes',   val: mes },
+                { id: 'egresoAnio',  val: anio },
+            ].forEach(f => { if (!f.val) { markError(f.id); valid = false; } });
+
+            if (!valid) return;
+
+            // Recolectar preferencias seleccionadas
+            const prefs = [...document.querySelectorAll('.pref-pill.selected')]
+                .map(el => el.textContent.trim())
+                .join(', ');
+            document.getElementById('preferenciasInput').value = prefs || 'Ninguna seleccionada';
+
+            // Estado de carga
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerHTML = `<svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg> Enviando...`;
+
+            // Enviar a Web3Forms
+            const formData = new FormData(document.getElementById('waitlistForm'));
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await res.json();
+
+                if (data.success) {
+                    document.getElementById('successName').textContent = nombre;
+                    document.getElementById('successState').classList.remove('hidden');
+                } else {
+                    throw new Error('Error en el envío');
+                }
+            } catch {
+                btn.disabled = false;
+                btn.innerHTML = `Unirme al movimiento <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>`;
+                alert('Hubo un error al enviar. Intenta de nuevo.');
+            }
+        }
+    </script>
+
+</body>
+</html>

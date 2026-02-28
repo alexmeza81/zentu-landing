@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "join.zentu.app" }],
+      "destination": "/waitlist-estudiantes.html"
+    }
+  ]
+}
